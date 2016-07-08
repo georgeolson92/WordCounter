@@ -8,9 +8,9 @@ _Count how many words are in a sentence with this program!_
 | Behavior | Input | Output |
 |:---  | :---  | :----  |
 |enter word, and a sentence in which to count instances of word| `"cats"; "Red cats orange cats brown cats blue cats purple cats"`| `"'Cats' appears 5 times."`|
-|only return full matches| `"cat"; "I walked my cat to the cathedral."`| `"'Cat' appears 1 time."`|
-|ignore punctuation in inputted sentences | `"cat"; "I walked my cat, a purple cat, named Catherine, to the cathedral."`| `"'Cat' appears 2 times."`|
-|ignore capitalization in inputted sentences | `"cat"; "Cat behavior is always fascinating. I love cats."`| `"'Cat' appears 1 time."`|
+|only return full word matches, not matching strings within words| `"cat"; "I walked my cat to the cathedral."`| `"'Cat' appears 1 time."`|
+|ignore punctuation in inputted sentences| `"cat"; "I walked my cat, a purple cat, named Catherine, to the cathedral."`| `"'Cat' appears 2 times."`|
+|ignore capitalization in inputted sentences| `"cat"; "Cat behavior is always fascinating. I love cats."`| `"'Cat' appears 1 time."`|
 
 ### Setup/Installation Requirements
 

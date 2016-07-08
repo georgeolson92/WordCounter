@@ -18,7 +18,6 @@ namespace WordCounter
         if (word == wordToFind)
         {
           matchedWords.Add(word);
-          Console.WriteLine(word);
         }
       }
 
