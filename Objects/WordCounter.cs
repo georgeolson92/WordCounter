@@ -10,7 +10,8 @@ namespace WordCounter
 
     public string CountRepeats(string wordToFind, string SentenceToSearch)
     {
-      string[] words = SentenceToSearch.Split(' ');
+      char[] separators = { ' ', ',', '.', ':' };
+      string[] words = SentenceToSearch.Split(separators);
       List<string> matchedWords = new List<string>();
 
       foreach (string word in words)

@@ -17,5 +17,33 @@ namespace WordCounter
       //Assert
       Assert.Equal(expectedResult, result);
     }
+
+    [Fact]
+    public void RepeatCounter_userInputCat_OutputOne()
+    {
+      //Arrange
+      string expectedResult = "1";
+
+      //Act
+      RepeatCounter repeatCounter = new RepeatCounter();
+      string result = repeatCounter.CountRepeats("cat", "I walked my cat to the cathedral");
+
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
+
+    [Fact]
+    public void RepeatCounter_userInputCat_OutputTwo()
+    {
+      //Arrange
+      string expectedResult = "2";
+
+      //Act
+      RepeatCounter repeatCounter = new RepeatCounter();
+      string result = repeatCounter.CountRepeats("cat", "I walked my cat, a purple cat, named Catherine, to the cathedral");
+
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
   }
 }
