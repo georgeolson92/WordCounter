@@ -5,14 +5,12 @@ namespace WordCounter
 {
   public class RepeatCounter
   {
-    // public string wordToFind;
-    // public string sentenceToSearch;
-
-    public string CountRepeats(string wordToFind, string SentenceToSearch)
+    public string CountRepeats(string wordToFind, string sentenceToSearch)
     {
-      SentenceToSearch = SentenceToSearch.ToLower();
+      wordToFind = wordToFind.ToLower();
+      sentenceToSearch = sentenceToSearch.ToLower();
       char[] separators = { ' ', ',', '.', ':' };
-      string[] words = SentenceToSearch.Split(separators);
+      string[] words = sentenceToSearch.Split(separators);
       List<string> matchedWords = new List<string>();
 
       foreach (string word in words)
