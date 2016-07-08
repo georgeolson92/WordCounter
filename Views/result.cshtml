@@ -1,7 +1,21 @@
-<h1>Word Repeat Counter</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <title>Word Repeat Counter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Word Repeat Counter</h1>
 
-<p>Your sentence was: "<em>@Model[0]</em>"</p>
+      <div class="jumbotron">
+        <p>Your sentence was: "<em>@Model[0]</em>"</p>
+        <h3>"@Model[1]" appears @Model[2] times in your sentence.</h3>
+      </div>
 
-<h3>"@Model[1]" appears @Model[2] times in your sentence.</h3>
-
-<a href="/">Try another sentence!</a>
+      <a href="/"><button class="btn-primary btn">Try another sentence!</button></a>
+    </div>
+  </form>
+</body>
+</html>

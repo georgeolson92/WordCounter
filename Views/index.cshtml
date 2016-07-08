@@ -1,13 +1,27 @@
-<h1>Word Repeat Counter</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="../Content/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <title>Word Repeat Counter</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Word Repeat Counter</h1>
 
-<p>Count how many times a word is repeated in a sentence!</p>
+      <p>Count how many times a word is repeated in a sentence!</p>
 
-<form action="/result" method="post">
-  <label for="inputSentence">Sentence:</label>
-  <input name="inputSentence">
-
-  <label for="inputWord">Word to find:</label>
-  <input name="inputWord">
-
-  <button type="submit">Count</button>
-</form>
+      <form action="/result" method="post">
+        <div class="form-group">
+          <label for="inputSentence">Sentence:</label>
+          <input name="inputSentence" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="inputWord">Word to find:</label>
+          <input name="inputWord" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Count</button>
+      </div>
+    </form>
+  </body>
+</html>
