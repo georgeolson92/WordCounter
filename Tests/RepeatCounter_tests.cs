@@ -1,23 +1,10 @@
 using Xunit;
+using WordCounter.Objects;
 
-namespace WordCounter.Objects
+namespace WordCounter.Tests
 {
   public class RepeatCounter_tests
   {
-    [Fact]
-    public void RepeatCounter_userInputCats_OutputFive()
-    {
-      //Arrange
-      string expectedResult = "5";
-
-      //Act
-      RepeatCounter repeatCounter = new RepeatCounter();
-      string result = repeatCounter.CountRepeats("cats", "Red cats orange cats brown cats blue cats purple cats");
-
-      //Assert
-      Assert.Equal(expectedResult, result);
-    }
-
     [Fact]
     public void RepeatCounter_userInputCat_OutputOne()
     {
@@ -26,7 +13,35 @@ namespace WordCounter.Objects
 
       //Act
       RepeatCounter repeatCounter = new RepeatCounter();
-      string result = repeatCounter.CountRepeats("cat", "I walked my cat to the cathedral");
+      string result = repeatCounter.CountRepeats("cat", "cat");
+
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
+
+    [Fact]
+    public void RepeatCounter_userInputCat_OutputZero()
+    {
+      //Arrange
+      string expectedResult = "0";
+
+      //Act
+      RepeatCounter repeatCounter = new RepeatCounter();
+      string result = repeatCounter.CountRepeats("cat", "dog");
+
+      //Assert
+      Assert.Equal(expectedResult, result);
+    }
+
+    [Fact]
+    public void RepeatCounter_userInputCats_OutputFive()
+    {
+      //Arrange
+      string expectedResult = "5";
+
+      //Act
+      RepeatCounter repeatCounter = new RepeatCounter();
+      string result = repeatCounter.CountRepeats("cats", "cats orange cats brown cats blue cats purple cats");
 
       //Assert
       Assert.Equal(expectedResult, result);

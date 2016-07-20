@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace WordCounter
+namespace WordCounter.Objects
 {
   public class RepeatCounter
   {
